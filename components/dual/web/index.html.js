@@ -1,6 +1,6 @@
 import getNipplejsMin from "react-native-game-pad/components/dual/web/nipplejs.min";
 
-const getWebPage = () => {
+const getWebPageDualJoystick = () => {
   const nipplejs = getNipplejsMin();
   return `
     <html>
@@ -23,4 +23,4 @@ const getWebPage = () => {
     `;
 }
 
-export default getWebPage;
+export default getWebPageDualJoystick;

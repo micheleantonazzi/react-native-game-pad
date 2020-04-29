@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import { StyleSheet, View } from "react-native";
 import { WebView } from "react-native-webview";
-import getWebPage from "react-native-game-pad/components/dual/web/index.html.js";
+import getWebPageDualJoystick from "react-native-game-pad/components/dual/web/index.html.js";
 
 const js = (options, options2) => {
   let string = `
@@ -226,7 +226,7 @@ class RNGamePadDual extends React.Component {
       <View style={{ flex: 1, flexDirection: "row" }}>
         <View style={{ flex: 1 }}>
           <WebView
-            source={{html: getWebPage()}}
+            source={{html: getWebPageDualJoystick()}}
             onMessage={evt => this.invokeCallback(evt.nativeEvent.data)}
             injectedJavaScript={js(options, options2)}
           />
