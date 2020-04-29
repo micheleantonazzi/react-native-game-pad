@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import { StyleSheet, View } from "react-native";
 import { WebView } from "react-native-webview";
-import getWebPageDualJoystick from "react-native-game-pad/components/dual/web/index.html.js";
+import getWebPageDualJoystick from "./web/index.html.js";
 
 const js = (options, options2) => {
   let string = `

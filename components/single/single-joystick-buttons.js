@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { WebView } from "react-native-webview";
-import getWebPageSingleJoystick from "react-native-game-pad/components/single/web/index.html.js";
+import getWebPageSingleJoystick from "./web/index.html.js";
 
 const js = options => {
   console.log("OPTIONS", options);

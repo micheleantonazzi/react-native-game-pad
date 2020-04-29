@@ -1,4 +1,4 @@
-import getNipplejsMin from "react-native-game-pad/components/dual/web/nipplejs.min";
+import getNipplejsMin from "./nipplejs.min";
 
 const getWebPageDualJoystick = () => {
   const nipplejs = getNipplejsMin();
