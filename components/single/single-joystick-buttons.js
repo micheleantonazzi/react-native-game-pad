@@ -1,6 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { WebView } from "react-native-webview";
+import getWebPageSingleJoystick from "react-native-game-pad/components/single/web/index.html.js";
 
 const js = options => {
   console.log("OPTIONS", options);
@@ -136,7 +137,7 @@ export class RNGamePadSingle extends React.Component {
       <View style={{ flex: 1, flexDirection: "row" }}>
         <View style={{ flex: 1 }}>
           <WebView
-            source={require("./web/index.html")}
+            source={{html: getWebPageSingleJoystick()}}
             onMessage={evt => this.invokeCallback(evt.nativeEvent.data)}
             injectedJavaScript={js(options)}
           />
