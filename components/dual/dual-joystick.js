@@ -226,7 +226,7 @@ class RNGamePadDual extends React.Component {
       <View style={{ flex: 1, flexDirection: "row" }}>
         <View style={{ flex: 1 }}>
           <WebView
-            source={{html: getWebPageDualJoystick()}}
+            source={{html: getWebPageDualJoystick(this.props.backgroundColor ? this.props.backgroundColor : 'white')}}
             onMessage={evt => this.invokeCallback(evt.nativeEvent.data)}
             injectedJavaScript={js(options, options2)}
           />

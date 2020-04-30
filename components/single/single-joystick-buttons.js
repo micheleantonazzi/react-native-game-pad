@@ -137,12 +137,12 @@ export class RNGamePadSingle extends React.Component {
       <View style={{ flex: 1, flexDirection: "row" }}>
         <View style={{ flex: 1 }}>
           <WebView
-            source={{html: getWebPageSingleJoystick()}}
+            source={{html: getWebPageSingleJoystick(this.props.backgroundColor ? this.props.backgroundColor : 'white')}}
             onMessage={evt => this.invokeCallback(evt.nativeEvent.data)}
             injectedJavaScript={js(options)}
           />
         </View>
-        <View style={{ flex: 1, backgroundColor: "white" }}>
+        <View style={{ flex: 1, backgroundColor: this.props.backgroundColor ? this.props.backgroundColor : "white" }}>
           <View
             style={{
               flexDirection: "row",

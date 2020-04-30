@@ -1,10 +1,10 @@
 import getNipplejsMin from "./nipplejs.min.js";
 
-const getWebPageSingleJoystick = () => {
+const getWebPageSingleJoystick = (backgroundColor) => {
   const nipplejs = getNipplejsMin();
   return `
     <html>
-      <body>
+      <body style="background-color: ${backgroundColor};">
         <div id="zone_joystick" style="
             position: absolute;
             width: 100%;
@@ -19,3 +19,4 @@ const getWebPageSingleJoystick = () => {
 }
 
 export default getWebPageSingleJoystick;
+
