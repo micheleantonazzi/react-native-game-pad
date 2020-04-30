@@ -1,7 +1,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import { RNGamePadSingle } from "./components/single/single-joystick-buttons";
-import RNGamePadDual from "./components/dual/dual-joystick";
+import { RNGamePadSingle } from "./components/single-joystick-buttons/single-joystick-buttons";
+import RNGamePadDual from "./components/dual-joystick/dual-joystick";
 
 class RNGamePad extends React.Component {
   renderKeyboard = () => {
