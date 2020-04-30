@@ -5,12 +5,14 @@ import RNGamePadDual from "./components/dual-joystick/dual-joystick";
 
 class RNGamePad extends React.Component {
   renderKeyboard = () => {
-    console.log("PROPS", this.props);
-    let { dualJoystick = false } = this.props;
-    if (dualJoystick) {
-      return <RNGamePadDual {...this.props} />;
+    switch (this.props.joystickType) {
+      case 'single-joystick-buttons':
+        return <RNGamePadSingle {...this.props} />;
+        break;
+      case 'dual-joystick':
+        return <RNGamePadDual {...this.props} />;
+        break;
     }
-    return <RNGamePadSingle {...this.props} />;
   };
 
   render() {
@@ -18,8 +20,12 @@ class RNGamePad extends React.Component {
   }
 }
 
+RNGamePad.defaulProps = {
+  joystickType: 'single-joystick-buttons'
+}
+
 RNGamePad.propTypes = {
-  dualJoystick: PropTypes.bool
+  joystickType: PropTypes.string
 };
 
 export default RNGamePad;
