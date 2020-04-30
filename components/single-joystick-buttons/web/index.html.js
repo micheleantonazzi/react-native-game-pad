@@ -4,6 +4,9 @@ const getWebPageSingleJoystick = (backgroundColor) => {
   const nipplejs = getNipplejsMin();
   return `
     <html>
+      <head>
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0">
+      </head>
       <body style="background-color: ${backgroundColor};">
         <div id="zone_joystick" style="
             position: absolute;
