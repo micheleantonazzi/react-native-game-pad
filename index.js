@@ -2,6 +2,7 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { RNGamePadSingle } from "./components/single-joystick-buttons/single-joystick-buttons";
 import RNGamePadDual from "./components/dual-joystick/dual-joystick";
+import RNGameSingleJoystick from "./components/single-joystick/single-joystick"
 
 class RNGamePad extends React.Component {
   renderKeyboard = () => {
@@ -11,6 +12,9 @@ class RNGamePad extends React.Component {
         break;
       case 'dual-joystick':
         return <RNGamePadDual {...this.props} />;
+        break;
+      case 'single-joystick':
+        return <RNGameSingleJoystick {...this.props} />;
         break;
     }
   };
