@@ -125,7 +125,9 @@ class RNGameSingleJoystick extends React.Component {
       <View style={{ flex: 1, flexDirection: "row" }}>
         <View style={{ flex: 1 }}>
           <WebView
-            source={{html: getWebPageSingleJoystick(this.props.backgroundColor ? this.props.backgroundColor : 'white')}}
+            style={{backgroundColor: this.props.backgroundColor}}
+            containerStyle={{backgroundColor: this.props.backgroundColor}}
+            source={{html: getWebPageSingleJoystick(this.props.backgroundColor)}}
             onMessage={evt => this.invokeCallback(evt.nativeEvent.data)}
             injectedJavaScript={js(options)}
           />
